@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Sign In – Netflix Clone</title>
+    <style>
+        .signin-header {
+            min-height: 100vh;
+        }
+        .signin-form-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .signin-form-wrapper h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .signin-form-wrapper > p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+        .signin-box {
+            background-color: rgba(0, 0, 0, 0.75);
+            padding: 40px 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .signin-box input {
+            display: block;
+            width: 100%;
+            padding: 14px 12px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 1rem;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 4px;
+            color: #fff;
+        }
+        .signin-box input:focus {
+            outline: none;
+            border-color: #e50914;
+        }
+        .signin-box button {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            background-color: #e50914;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+        .signin-box button:hover {
+            background-color: #f40612;
+        }
+
+        @media (max-width: 480px) {
+            .signin-form-wrapper h1 {
+                font-size: 1.8rem;
+            }
+            .signin-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="signin-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="css/img/logo.svg" alt="Netflix Logo"></a>
+            </div>
+            <div class="nav-right">
+                <select class="language-select">
+                    <option>English</option>
+                    <option>हिंदी</option>
+                </select>
+            </div>
+        </nav>
+
+        <div class="signin-form-wrapper">
+            <h1>Sign In</h1>
+            <p>Enter your email and password to continue.</p>
+            <div class="signin-box">
+                <form action="" method="post">
+                    <input type="email" placeholder="Email address" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Get Started </button>
+                </form>
+            </div>
+        </div>
+    </header>
+    
+
+    
+</body>
+</html>
