@@ -154,6 +154,38 @@ header {
     margin-left: 30px;
 }
 
+.trending-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 0 40px 0 30px;
+}
+
+.trending-controls button,
+.main-list li button {
+    padding: 9px 14px;
+    border: 1px solid #777;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.trending-controls button:hover,
+.main-list li button:hover,
+.trending-controls button[aria-pressed="true"] {
+    background-color: #e50914;
+    border-color: #e50914;
+}
+
+.trending-controls button:focus-visible,
+.main-list li button:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
 /* --- Trending row --- */
 .main-content {
     padding: 0 20px;
@@ -172,16 +204,37 @@ header {
     flex: 0 0 auto;
 }
 
+.main-list li[hidden] {
+    display: none;
+}
+
 .main-list img {
     width: 220px;
     height: 300px;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease-in-out;
+    display: block;
 }
 
 .main-list img:hover {
     transform: scale(1.08);
+}
+
+.main-list li button {
+    width: 100%;
+    margin-top: 8px;
+}
+
+.empty-state,
+.form-message {
+    min-height: 1.4em;
+    color: #ddd;
+    font-size: 0.95rem;
+}
+
+.form-message {
+    margin-top: 10px;
 }
 
 /* --- More reasons to join --- */
@@ -328,6 +381,32 @@ header {
     background-color: #f40612;
 }
 
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 90px;
+}
+
+.password-field button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: auto;
+    margin: 0;
+    padding: 6px;
+    transform: translateY(-50%);
+    background: transparent;
+    color: #fff;
+    font-size: 0.85rem;
+}
+
+.password-field button:hover {
+    background: transparent;
+    text-decoration: underline;
+}
+
 /* ========== FOOTER ========== */
 footer {
     padding: 40px 20px;
@@ -405,6 +484,10 @@ footer h4 {
         height: 240px;
     }
 
+    .trending-controls {
+        margin-right: 20px;
+    }
+
     .container {
         flex-direction: column;
     }
@@ -469,6 +552,10 @@ footer h4 {
     .main-list img {
         width: 150px;
         height: 200px;
+    }
+
+    .trending-controls {
+        margin-right: 14px;
     }
 
     .box h2 {

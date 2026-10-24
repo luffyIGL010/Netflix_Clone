@@ -1,6 +1,6 @@
 # 🎬 Netflix Clone
 
-A pixel-perfect Netflix India landing page clone built with **pure HTML & CSS** — no frameworks, no JavaScript. Fully responsive across desktop, tablet, and mobile screens.
+A responsive Netflix India landing page clone built with **HTML, CSS, and vanilla JavaScript** — no frameworks or dependencies.
 
 ![Homepage Desktop](screenshots/homepage-desktop.jpg)
 
@@ -14,6 +14,9 @@ A pixel-perfect Netflix India landing page clone built with **pure HTML & CSS** 
 - 🎨 **Netflix-accurate UI** — Dark theme, signature red (#E50914) accent, hover effects, smooth transitions
 - 📋 **FAQ Accordion** — Expandable questions using native `<details>` / `<summary>` elements (no JS needed)
 - 🎞️ **Trending Carousel** — Horizontally scrollable movie poster row with hover zoom effect
+- ⭐ **My List** — Save and remove titles, filter the carousel, and keep selections in `localStorage`
+- 🎮 **Interactive Controls** — Carousel navigation, password visibility toggle, and accessible button states
+- ✉️ **Form Feedback** — Browser email validation and clear demo-only submit messages
 
 ---
 
@@ -38,8 +41,9 @@ A pixel-perfect Netflix India landing page clone built with **pure HTML & CSS** 
 |------------|-------|
 | **HTML5** | Page structure & semantics |
 | **CSS3** | Styling, Flexbox, Grid, Media Queries |
+| **JavaScript** | Carousel controls, persistent watchlist, and form interactions |
 
-> No JavaScript. No frameworks. No dependencies. Just clean HTML & CSS.
+> No frameworks or dependencies. Forms provide front-end demo feedback only; no account or authentication backend is connected.
 
 ---
 
@@ -49,6 +53,8 @@ A pixel-perfect Netflix India landing page clone built with **pure HTML & CSS** 
 Netflix_Clone/
 ├── index.html              # Main landing page
 ├── signin.html             # Sign-in page
+├── js/
+│   └── app.js               # Carousel, My List, and form interactions
 ├── README.md
 ├── screenshots/            # README images
 │   ├── homepage-desktop.jpg
