@@ -389,7 +389,7 @@ header {
     padding-right: 90px;
 }
 
-.password-field button {
+.signin-box .password-field button {
     position: absolute;
     top: 50%;
     right: 10px;
@@ -402,7 +402,7 @@ header {
     font-size: 0.85rem;
 }
 
-.password-field button:hover {
+.signin-box .password-field button:hover {
     background: transparent;
     text-decoration: underline;
 }
