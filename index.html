@@ -30,10 +30,11 @@
                 <p>Ready to watch? Enter your email to create or restart your membership.</p>
             </div>
             <div class="hero-form">
-                <form action="">
-                    <input type="email" placeholder="Email address">
+                <form>
+                    <input type="email" placeholder="Email address" aria-label="Email address" required>
                     <button type="submit">Get Started &gt;</button>
                 </form>
+                <p class="form-message" aria-live="polite"></p>
             </div>
         </div>
     </header>
@@ -41,17 +42,22 @@
 
     <main class="main-section">
         <h2>Trending Now</h2>
+        <div class="trending-controls" aria-label="Trending titles controls">
+            <button type="button" data-carousel-direction="-1" aria-label="Scroll trending titles left">&lsaquo;</button>
+            <button type="button" data-watchlist-filter aria-pressed="false">My List (0)</button>
+            <button type="button" data-carousel-direction="1" aria-label="Scroll trending titles right">&rsaquo;</button>
+        </div>
         <div class="main-content">
-            <ul class="main-list">
-                <li><img id="t1" src="css/img/t1.jpg" alt=""></li>
-                <li><img id="t2" src="css/img/t5.jpeg" alt=""></li>
-                <li><img id="t3" src="css/img/t4.jpg" alt=""></li>
-                <li><img id="t4" src="css/img/t6.jpg" alt=""></li>
-                <li><img id="t5" src="css/img/images.jpeg" alt=""></li>
-                <li><img id="t6" src="css/img/images-2.jpeg" alt=""></li>
-                <li><img id="t7" src="css/img/t7.jpeg" alt=""></li>
-
+            <ul class="main-list" data-carousel>
+                <li data-title-id="title-1"><img id="t1" src="css/img/t1.jpg" alt="Trending title 1 poster"><button type="button" data-watchlist-toggle aria-pressed="false">+ My List</button></li>
+                <li data-title-id="title-2"><img id="t2" src="css/img/t5.jpeg" alt="Trending title 2 poster"><button type="button" data-watchlist-toggle aria-pressed="false">+ My List</button></li>
+                <li data-title-id="title-3"><img id="t3" src="css/img/t4.jpg" alt="Trending title 3 poster"><button type="button" data-watchlist-toggle aria-pressed="false">+ My List</button></li>
+                <li data-title-id="title-4"><img id="t4" src="css/img/t6.jpg" alt="Trending title 4 poster"><button type="button" data-watchlist-toggle aria-pressed="false">+ My List</button></li>
+                <li data-title-id="title-5"><img id="t5" src="css/img/images.jpeg" alt="Trending title 5 poster"><button type="button" data-watchlist-toggle aria-pressed="false">+ My List</button></li>
+                <li data-title-id="title-6"><img id="t6" src="css/img/images-2.jpeg" alt="Trending title 6 poster"><button type="button" data-watchlist-toggle aria-pressed="false">+ My List</button></li>
+                <li data-title-id="title-7"><img id="t7" src="css/img/t7.jpeg" alt="Trending title 7 poster"><button type="button" data-watchlist-toggle aria-pressed="false">+ My List</button></li>
             </ul>
+            <p class="empty-state" data-empty-state hidden>No titles saved yet. Add a title to My List to see it here.</p>
         </div>
 
         <h2>More reasons to join</h2>
@@ -138,10 +144,11 @@ Kids profiles come with PIN-protected parental controls that let you restrict th
         </div>
 
         <div class="form-2">
-            <form action="">
-                <input type="email" placeholder="Email address">
+            <form>
+                <input type="email" placeholder="Email address" aria-label="Email address" required>
                 <button type="submit">Get Started &gt;</button>
             </form>
+            <p class="form-message" aria-live="polite"></p>
         </div>
 
     </main>
@@ -174,5 +181,6 @@ Kids profiles come with PIN-protected parental controls that let you restrict th
         </div>
     </footer>
 
+    <script src="js/app.js" defer></script>
 </body>
 </html>
