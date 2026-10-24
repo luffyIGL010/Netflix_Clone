@@ -5,10 +5,7 @@ const watchlistKey = "netflix-clone-watchlist";
 if (carousel && watchlistFilter) {
     const cards = [...carousel.querySelectorAll("[data-title-id]")];
     const emptyState = document.querySelector("[data-empty-state]");
-    const status = document.createElement("p");
-    status.className = "form-message";
-    status.setAttribute("aria-live", "polite");
-    watchlistFilter.insertAdjacentElement("afterend", status);
+    const status = document.querySelector("[data-watchlist-status]");
 
     const savedIds = JSON.parse(localStorage.getItem(watchlistKey) || "[]");
     const watchlist = new Set(
